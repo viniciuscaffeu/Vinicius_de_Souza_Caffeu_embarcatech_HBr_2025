@@ -1,6 +1,6 @@
 # Projetos de Sistemas Embarcados - EmbarcaTech 2025
 
-Autor: Vinicius de Souza Caffeu )HBr - Campinas
+Autor: Vinicius de Souza Caffeu (HBr - Campinas)
 
 Curso: Residência Tecnológica em Sistemas Embarcados
 
