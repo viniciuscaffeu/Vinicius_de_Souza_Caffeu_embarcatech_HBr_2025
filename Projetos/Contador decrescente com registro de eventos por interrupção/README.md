@@ -1,4 +1,4 @@
-# 🧮 Contador Decrescente com OLED – EMBARCATECH 2025
+# 🧮 Contador Decrescente com OLED 
 
 Este projeto apresenta um contador decrescente de 9 a 0 utilizando o Raspberry Pi Pico W e um display OLED conectado via I2C. A proposta visa demonstrar o uso de periféricos em sistemas embarcados, incorporando também a interação com dois botões físicos: um para iniciar a contagem e outro para contabilizar cliques durante a execução.
 
