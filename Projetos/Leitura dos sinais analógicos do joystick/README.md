@@ -8,8 +8,8 @@ Este projeto em C utiliza o microcontrolador Raspberry Pi Pico da BitDogLab para
 
 O projeto original encontra-se no repositório oficial da BitDogLab, dentro do diretório de exemplos para o joystick.
 
-**Repositório:** https://github.com/BitDogLab/Pico_BitDogLab_Examples  
-**Diretório:** `/joystick`
+**Repositório:** (https://github.com/BitDogLab/BitDogLab-C)  
+**Diretório:** `joystick`
 
 ---
 
