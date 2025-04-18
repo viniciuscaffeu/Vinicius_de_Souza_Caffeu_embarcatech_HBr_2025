@@ -1,56 +1,34 @@
-Contador Decrescente com OLED - EMBARCATECH 2025
-Este projeto implementa um contador decrescente de 9 a 0, utilizando o Raspberry Pi Pico W e um display OLED via comunicação I2C. Durante a contagem, é possível registrar cliques de um segundo botão, proporcionando uma interface interativa para aplicações educacionais ou demonstrações de sistemas embarcados.
+# 🧮 Contador Decrescente com OLED – EMBARCATECH 2025
 
-🎯 Objetivo
-Criar um contador visual e interativo que:
+Este projeto apresenta um contador decrescente de 9 a 0 utilizando o Raspberry Pi Pico W e um display OLED conectado via I2C. A proposta visa demonstrar o uso de periféricos em sistemas embarcados, incorporando também a interação com dois botões físicos: um para iniciar a contagem e outro para contabilizar cliques durante a execução.
 
-Inicie a contagem decrescente com o Botão A;
+Ao energizar o sistema, o display exibe a mensagem **"Pressione A"**, sinalizando que o dispositivo está pronto para começar. Ao pressionar o **Botão A** (GPIO5), a contagem decrescente inicia, com decremento de 1 em 1 segundo. Durante esse processo, cada clique no **Botão B** (GPIO6) é registrado e exibido em tempo real no display. Ao final da contagem, o sistema exibe **"FIM!"** e o total de cliques, incentivando nova interação.
 
-Permita contar cliques com o Botão B durante a contagem;
+O display OLED se comunica por meio do barramento I2C, utilizando os pinos **GPIO14 (SDA)** e **GPIO15 (SCL)** da placa Pico W. Os botões utilizam resistores de pull-up ativados por software.
 
-Exiba informações em um display OLED;
+Além da interface visual, o programa também imprime mensagens no terminal serial para facilitar a depuração e o acompanhamento em tempo real. O código-fonte está dividido em:
 
-Forneça saídas via serial para depuração.
+- `main.c`: responsável pela lógica principal do programa e controle de eventos.
+- `ssd1306.h`: biblioteca para comunicação com o display OLED via I2C.
 
-🔧 Lista de Materiais
+## 🔧 Requisitos de Hardware
 
-Componente	Conexão no Raspberry Pi Pico W
-Raspberry Pi Pico W	-
-Display OLED I2C	SDA: GPIO14 / SCL: GPIO15
-Botão A	GPIO5
-Botão B	GPIO6
-Resistores Pull-up	Internos
-🚀 Execução
-Abra o projeto no VS Code, com ambiente de desenvolvimento configurado para o SDK do Raspberry Pi Pico (CMake + compilador ARM);
+- Raspberry Pi Pico W  
+- Display OLED (I2C, 128x64)  
+- 2 botões táteis  
+- Jumpers e protoboard  
 
-Compile o projeto (Ctrl+Shift+B ou use cmake e make via terminal);
+## 🚀 Execução
 
-Conecte a placa via USB segurando o botão BOOTSEL para entrar no modo boot;
+1. Compile o projeto usando o SDK da Raspberry Pi Pico.
+2. Gere o arquivo `.uf2` e transfira para o Pico em modo boot.
+3. Pressione o botão A para iniciar a contagem.
+4. Pressione o botão B durante a contagem para registrar cliques.
 
-Copie o arquivo .uf2 gerado para a unidade RPI-RP2 que aparecerá;
+## 🎓 Aplicação
 
-A placa reiniciará automaticamente e o projeto será executado;
+Este projeto faz parte da disciplina de Sistemas Embarcados do **EMBARCATECH 2025**, com foco na integração de periféricos, controle de tempo, interrupções e interação homem-máquina.
 
-O display OLED exibirá o status da contagem, o número de cliques no botão B e mensagens de instrução ao usuário;
+## 📄 Licença
 
-A saída serial exibirá os eventos em tempo real.
-
-⚙️ Lógica do Funcionamento
-Pressionar o Botão A reinicia a contagem de 9 a 0;
-
-Durante a contagem, cada clique no Botão B é registrado;
-
-Ao chegar a 0, a contagem para e exibe o total de cliques;
-
-O display OLED mostra:
-
-O número atual da contagem ou o status ("FIM!" ou "Aguardando...");
-
-Quantidade de cliques no botão B;
-
-Mensagem de instrução ("Pressione A" ou "Pressione B").
-
-📁 Arquivos
-src/main.c: Código-fonte principal com configuração dos botões, timer e OLED;
-
-inc/ssd1306.h: Biblioteca personalizada para controle do display OLED via I2C.
+Distribuído sob a Licença MIT.
