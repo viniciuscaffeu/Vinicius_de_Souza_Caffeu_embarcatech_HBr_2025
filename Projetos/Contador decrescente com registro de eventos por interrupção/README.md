@@ -16,7 +16,6 @@ Além da interface visual, o programa também imprime mensagens no terminal seri
 - Raspberry Pi Pico W  
 - Display OLED (I2C, 128x64)  
 - 2 botões táteis  
-- Jumpers e protoboard  
 
 ## 🚀 Execução
 
