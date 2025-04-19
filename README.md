@@ -18,7 +18,7 @@ Cada projeto está em sua própria pasta, contendo:
 
 - Código-fonte em C
 - Arquivo `CMakeLists.txt` para build
-- Pasta `inc/` para arquivos de cabeçalho (se necessário)
+- Pasta para arquivos de cabeçalho (se necessário)
 - `README.md` com descrição específica do projeto
 
 ---
@@ -26,7 +26,7 @@ Cada projeto está em sua própria pasta, contendo:
 ## Projetos desenvolvidos
 
 - `contador_decrescente/`  
-  Exibe uma contagem regressiva usando a matriz de LEDs RGB da BitDogLab.
+  Exibe uma contagem decrescente de 9 a 0 usando Raspberry Pi Pico W e display OLED via I2C, com interação de dois botões físicos: um para iniciar a contagem e outro para contabilizar cliques (interrupção).
 
 - `joystick/`  
   Lê valores analógicos do joystick da BitDogLab e os exibe via terminal serial.
@@ -36,5 +36,4 @@ Cada projeto está em sua própria pasta, contendo:
 
 ---
 
-## Organização das pastas
 
